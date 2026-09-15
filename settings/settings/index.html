@@ -1,0 +1,258 @@
+<!DOCTYPE html><html lang="ko" dir="ltr" data-theme="dark" data-has-toc data-has-sidebar class="astro-vdxcvpsm"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>설정 항목 안내 | AURORA SCRAP 매뉴얼</title><link rel="canonical" href="https://bluebzzang-stack.github.io/aurora-scrap-docs/settings/settings/"/><link rel="sitemap" href="/aurora-scrap-docs/sitemap-index.xml"/><link rel="shortcut icon" href="/aurora-scrap-docs/favicon.svg" type="image/svg+xml"/><meta name="generator" content="Astro v7.2.0"/><meta name="generator" content="Starlight v0.41.7"/><meta property="og:title" content="설정 항목 안내"/><meta property="og:type" content="article"/><meta property="og:url" content="https://bluebzzang-stack.github.io/aurora-scrap-docs/settings/settings/"/><meta property="og:locale" content="ko"/><meta property="og:description" content="일반, 테마, 워크스페이스, 목록, 스크랩, 계정, 라이선스 탭의 실제 설정 항목을 설명합니다."/><meta property="og:site_name" content="AURORA SCRAP 매뉴얼"/><meta name="twitter:card" content="summary_large_image"/><meta name="description" content="일반, 테마, 워크스페이스, 목록, 스크랩, 계정, 라이선스 탭의 실제 설정 항목을 설명합니다."/><script>
+	window.StarlightThemeProvider = (() => {
+		const storedTheme =
+			typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');
+		const theme =
+			storedTheme ||
+			(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+		document.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';
+		return {
+			updatePickers(theme = storedTheme || 'auto') {
+				document.querySelectorAll('starlight-theme-select').forEach((picker) => {
+					const select = picker.querySelector('select');
+					if (select) select.value = theme;
+					/** @type {HTMLTemplateElement | null} */
+					const tmpl = document.querySelector(`#theme-icons`);
+					const newIcon = tmpl && tmpl.content.querySelector('.' + theme);
+					if (newIcon) {
+						const oldIcon = picker.querySelector('svg.label-icon');
+						if (oldIcon) {
+							oldIcon.replaceChildren(...newIcon.cloneNode(true).childNodes);
+						}
+					}
+				});
+			},
+		};
+	})();
+</script><template id="theme-icons"><svg aria-hidden="true" class="light astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z"/></svg><svg aria-hidden="true" class="dark astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.64 13a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z"/></svg><svg aria-hidden="true" class="auto astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg></template><link rel="stylesheet" href="/aurora-scrap-docs/_astro/print.ehPL0gv-.css" media="print"><link rel="stylesheet" href="/aurora-scrap-docs/_astro/common.B7VdhUIM.css"><style>@layer starlight.components{.card:where(.astro-zts4jgjd){--sl-card-border:var(--sl-color-purple);--sl-card-bg:var(--sl-color-purple-low);border:1px solid var(--sl-color-gray-5);background-color:var(--sl-color-black);flex-direction:column;gap:clamp(.5rem,.125rem + 1vw,1rem);padding:clamp(1rem,.125rem + 3vw,2.5rem)}.card:where(.astro-zts4jgjd):nth-child(4n+1){--sl-card-border:var(--sl-color-orange);--sl-card-bg:var(--sl-color-orange-low)}.card:where(.astro-zts4jgjd):nth-child(4n+3){--sl-card-border:var(--sl-color-green);--sl-card-bg:var(--sl-color-green-low)}.card:where(.astro-zts4jgjd):nth-child(4n+4){--sl-card-border:var(--sl-color-red);--sl-card-bg:var(--sl-color-red-low)}.card:where(.astro-zts4jgjd):nth-child(4n+5){--sl-card-border:var(--sl-color-blue);--sl-card-bg:var(--sl-color-blue-low)}.title:where(.astro-zts4jgjd){font-weight:600;font-size:var(--sl-text-h4);color:var(--sl-color-white);line-height:var(--sl-line-height-headings);align-items:center;gap:1rem}.card:where(.astro-zts4jgjd) .icon:where(.astro-zts4jgjd){border:1px solid var(--sl-card-border);background-color:var(--sl-card-bg);border-radius:.25rem;flex-shrink:0;padding:.2em}.card:where(.astro-zts4jgjd) .body:where(.astro-zts4jgjd){font-size:clamp(var(--sl-text-sm), calc(.5rem + 1vw), var(--sl-text-body));margin:0}.card-grid:where(.astro-lmor3ela){grid-template-columns:100%;gap:1rem;display:grid}.card-grid:where(.astro-lmor3ela)>*{margin-top:0!important}@media (width>=50rem){.card-grid:where(.astro-lmor3ela){grid-template-columns:1fr 1fr;gap:1.5rem}.stagger:where(.astro-lmor3ela){--stagger-height:5rem;padding-bottom:var(--stagger-height)}.stagger:where(.astro-lmor3ela)>:nth-child(2n){transform:translateY(var(--stagger-height))}}}
+@layer starlight.components{svg:where(.astro-n5k4ipy7){color:var(--sl-icon-color);font-size:var(--sl-icon-size,1em);width:1em;height:1em}}
+</style><script type="module" src="/aurora-scrap-docs/_astro/page.Dwipeu-R.js"></script></head><body class="astro-vdxcvpsm"><a class="sl-skip-link astro-vxeigawq" href="#_top">콘텐츠로 이동</a><div class="page sl-flex astro-gqpr5s5a"><header class="header astro-gqpr5s5a"><div class="header astro-nczgtkxc"><div class="title-wrapper sl-flex astro-nczgtkxc"><a href="/aurora-scrap-docs/" class="site-title sl-flex astro-clw6ags5"><span class="astro-clw6ags5" translate="no">AURORA SCRAP 매뉴얼</span></a></div><div class="sl-flex print:hidden astro-nczgtkxc"><site-search class="astro-nczgtkxc astro-r5ar4xm7" data-translations="{&quot;placeholder&quot;:&quot;검색&quot;}"><button data-open-modal disabled aria-label="검색" aria-keyshortcuts="Control+K" class="astro-r5ar4xm7"><svg aria-hidden="true" class="astro-r5ar4xm7 astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/></svg><span class="sl-hidden md:sl-block astro-r5ar4xm7" aria-hidden="true">검색</span><kbd class="sl-hidden md:sl-flex astro-r5ar4xm7" style="display: none;"><kbd class="astro-r5ar4xm7">Ctrl</kbd><kbd class="astro-r5ar4xm7">K</kbd></kbd></button><dialog style="padding:0" aria-label="검색" class="astro-r5ar4xm7"><div class="dialog-frame sl-flex astro-r5ar4xm7"><button data-close-modal class="sl-flex md:sl-hidden astro-r5ar4xm7">취소</button><div class="search-container astro-r5ar4xm7"><div id="starlight__search" class="astro-r5ar4xm7"></div></div></div></dialog></site-search><script>
+	(() => {
+		const openBtn = document.querySelector('button[data-open-modal]');
+		const shortcut = openBtn?.querySelector('kbd');
+		if (!openBtn || !(shortcut instanceof HTMLElement)) return;
+		const platformKey = shortcut.querySelector('kbd');
+		if (platformKey && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+			platformKey.textContent = '⌘';
+			openBtn.setAttribute('aria-keyshortcuts', 'Meta+K');
+		}
+		shortcut.style.display = '';
+	})();
+</script><script type="module" src="/aurora-scrap-docs/_astro/Search.astro_astro_type_script_index_0_lang.BRtQTddV.js"></script></div><div class="sl-hidden md:sl-flex print:hidden right-group astro-nczgtkxc"><div class="sl-flex social-icons astro-nczgtkxc"></div><starlight-theme-select><label style="--sl-select-width: 6.25em" class="astro-r2p65idu"><span class="sr-only astro-r2p65idu">테마 선택</span><svg aria-hidden="true" class="icon label-icon astro-r2p65idu astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg><select autocomplete="off" class="astro-r2p65idu"><option value="dark" class="astro-r2p65idu">어두운 테마</option><option value="light" class="astro-r2p65idu">밝은 테마</option><option value="auto" selected class="astro-r2p65idu">자동</option></select><svg aria-hidden="true" class="icon caret astro-r2p65idu astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg></label></starlight-theme-select><script>
+	StarlightThemeProvider.updatePickers();
+</script><script type="module">var e=`starlight-theme`,t=e=>e===`auto`||e===`dark`||e===`light`?e:`auto`,n=()=>t(typeof localStorage<`u`&&localStorage.getItem(e));function r(t){typeof localStorage<`u`&&localStorage.setItem(e,t===`light`||t===`dark`?t:``)}var i=()=>matchMedia(`(prefers-color-scheme: light)`).matches?`light`:`dark`;function a(e){StarlightThemeProvider.updatePickers(e),document.documentElement.dataset.theme=e===`auto`?i():e,r(e)}matchMedia(`(prefers-color-scheme: light)`).addEventListener(`change`,()=>{n()===`auto`&&a(`auto`)});var o=class extends HTMLElement{constructor(){super(),a(n()),this.querySelector(`select`)?.addEventListener(`change`,e=>{e.currentTarget instanceof HTMLSelectElement&&a(t(e.currentTarget.value))})}};customElements.define(`starlight-theme-select`,o);</script><script type="module">var e=class extends HTMLElement{constructor(){super();let e=this.querySelector(`select`);e&&(e.addEventListener(`change`,e=>{e.currentTarget instanceof HTMLSelectElement&&(window.location.pathname=e.currentTarget.value)}),window.addEventListener(`pageshow`,t=>{if(!t.persisted)return;let n=e.querySelector(`option[selected]`)?.index;n!==e.selectedIndex&&(e.selectedIndex=n??0)}))}};customElements.define(`starlight-lang-select`,e);</script></div></div></header><nav class="sidebar print:hidden astro-gqpr5s5a" aria-label="메인"><starlight-menu-button class="print:hidden astro-vvx7mffu"><button aria-expanded="false" aria-label="메뉴" aria-controls="starlight__sidebar" class="sl-flex md:sl-hidden astro-vvx7mffu"><svg aria-hidden="true" class="open-menu astro-vvx7mffu astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M3 8h18a1 1 0 1 0 0-2H3a1 1 0 0 0 0 2Zm18 8H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Zm0-5H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Z"/></svg><svg aria-hidden="true" class="close-menu astro-vvx7mffu astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="m13.41 12 6.3-6.29a1.004 1.004 0 1 0-1.42-1.42L12 10.59l-6.29-6.3a1.004 1.004 0 0 0-1.42 1.42l6.3 6.29-6.3 6.29a1 1 0 0 0 0 1.42.998.998 0 0 0 1.42 0l6.29-6.3 6.29 6.3a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.42L13.41 12Z"/></svg></button></starlight-menu-button><script type="module">var e=class extends HTMLElement{btn=this.querySelector(`button`);constructor(){super(),this.btn.addEventListener(`click`,()=>this.toggleExpanded());let e=this.closest(`nav`);e&&e.addEventListener(`keyup`,e=>this.closeOnEscape(e)),matchMedia(`(min-width: 50em)`).addEventListener(`change`,()=>this.setExpanded(!1))}setExpanded(e){this.setAttribute(`aria-expanded`,String(e)),document.body.toggleAttribute(`data-mobile-menu-expanded`,e),document.querySelectorAll(`.main-frame, .sl-skip-link`).forEach(t=>{t.toggleAttribute(`inert`,e)})}toggleExpanded(){this.setExpanded(this.getAttribute(`aria-expanded`)!==`true`)}closeOnEscape(e){e.code===`Escape`&&(this.setExpanded(!1),this.btn.focus())}};customElements.define(`starlight-menu-button`,e);</script><div id="starlight__sidebar" class="sidebar-pane astro-gqpr5s5a"><div class="sidebar-content sl-flex astro-gqpr5s5a"><sl-sidebar-state-persist data-hash="1tzmwgj" class="astro-f5yvicm7"><script aria-hidden="true">
+		(() => {
+			try {
+				if (!matchMedia('(min-width: 50em)').matches) return;
+				/** @type {HTMLElement | null} */
+				const target = document.querySelector('sl-sidebar-state-persist');
+				const state = JSON.parse(sessionStorage.getItem('sl-sidebar-state') || '0');
+				if (!target || !state || target.dataset.hash !== state.hash) return;
+				window._starlightScrollRestore = state.scroll;
+				customElements.define(
+					'sl-sidebar-restore',
+					class SidebarRestore extends HTMLElement {
+						connectedCallback() {
+							try {
+								const idx = parseInt(this.dataset.index || '');
+								const details = this.closest('details');
+								if (details && typeof state.open[idx] === 'boolean') details.open = state.open[idx];
+							} catch {}
+						}
+					}
+				);
+			} catch {}
+		})();
+	</script><ul class="top-level astro-ojxuodky"><li class="astro-ojxuodky"><details open class="astro-ojxuodky"><summary class="astro-ojxuodky"><span class="group-label astro-ojxuodky"><span class="large astro-ojxuodky">시작하기</span></span><svg aria-hidden="true" class="caret astro-ojxuodky astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="0"></sl-sidebar-restore><ul class="astro-ojxuodky"><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/getting-started/install/" class="astro-ojxuodky"><span class="astro-ojxuodky">설치</span></a></li><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/getting-started/overview/" class="astro-ojxuodky"><span class="astro-ojxuodky">화면 구성 안내</span></a></li><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/getting-started/first-scrap/" class="astro-ojxuodky"><span class="astro-ojxuodky">첫 스크랩 10분 가이드</span></a></li><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/getting-started/browser-extension/" class="astro-ojxuodky"><span class="astro-ojxuodky">브라우저 확장 설치와 연결</span></a></li></ul></details></li><li class="astro-ojxuodky"><details open class="astro-ojxuodky"><summary class="astro-ojxuodky"><span class="group-label astro-ojxuodky"><span class="large astro-ojxuodky">스크랩 만들기</span></span><svg aria-hidden="true" class="caret astro-ojxuodky astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="1"></sl-sidebar-restore><ul class="astro-ojxuodky"><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/scrap/from-app/" class="astro-ojxuodky"><span class="astro-ojxuodky">앱에서 URL로 스크랩</span></a></li><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/scrap/from-extension/" class="astro-ojxuodky"><span class="astro-ojxuodky">확장으로 스크랩</span></a></li><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/scrap/screen-capture/" class="astro-ojxuodky"><span class="astro-ojxuodky">화면 캡처</span></a></li><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/scrap/file-import/" class="astro-ojxuodky"><span class="astro-ojxuodky">파일과 폴더 가져오기</span></a></li><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/scrap/video-download/" class="astro-ojxuodky"><span class="astro-ojxuodky">동영상 다운로드</span></a></li></ul></details></li><li class="astro-ojxuodky"><details open class="astro-ojxuodky"><summary class="astro-ojxuodky"><span class="group-label astro-ojxuodky"><span class="large astro-ojxuodky">저장 형식</span></span><svg aria-hidden="true" class="caret astro-ojxuodky astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="2"></sl-sidebar-restore><ul class="astro-ojxuodky"><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/formats/overview/" class="astro-ojxuodky"><span class="astro-ojxuodky">저장 형식 비교</span></a></li><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/formats/markdown-and-metadata/" class="astro-ojxuodky"><span class="astro-ojxuodky">본문과 메타데이터</span></a></li></ul></details></li><li class="astro-ojxuodky"><details open class="astro-ojxuodky"><summary class="astro-ojxuodky"><span class="group-label astro-ojxuodky"><span class="large astro-ojxuodky">정리하기</span></span><svg aria-hidden="true" class="caret astro-ojxuodky astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="3"></sl-sidebar-restore><ul class="astro-ojxuodky"><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/organize/workspace/" class="astro-ojxuodky"><span class="astro-ojxuodky">워크스페이스</span></a></li><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/organize/category/" class="astro-ojxuodky"><span class="astro-ojxuodky">카테고리</span></a></li><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/organize/labels-tags-memo/" class="astro-ojxuodky"><span class="astro-ojxuodky">라벨, 태그와 메모</span></a></li><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/organize/favorites/" class="astro-ojxuodky"><span class="astro-ojxuodky">좋아요 모아보기</span></a></li><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/organize/multi-select-trash/" class="astro-ojxuodky"><span class="astro-ojxuodky">다중 선택과 휴지통</span></a></li></ul></details></li><li class="astro-ojxuodky"><details open class="astro-ojxuodky"><summary class="astro-ojxuodky"><span class="group-label astro-ojxuodky"><span class="large astro-ojxuodky">찾고 보기</span></span><svg aria-hidden="true" class="caret astro-ojxuodky astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="4"></sl-sidebar-restore><ul class="astro-ojxuodky"><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/find-and-view/list-search-sort/" class="astro-ojxuodky"><span class="astro-ojxuodky">목록 검색과 정렬</span></a></li><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/find-and-view/global-search/" class="astro-ojxuodky"><span class="astro-ojxuodky">통합검색</span></a></li><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/find-and-view/preview-panel/" class="astro-ojxuodky"><span class="astro-ojxuodky">미리보기 패널</span></a></li><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/find-and-view/ocr/" class="astro-ojxuodky"><span class="astro-ojxuodky">이미지 글자 인식</span></a></li></ul></details></li><li class="astro-ojxuodky"><details open class="astro-ojxuodky"><summary class="astro-ojxuodky"><span class="group-label astro-ojxuodky"><span class="large astro-ojxuodky">만들기</span></span><svg aria-hidden="true" class="caret astro-ojxuodky astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="5"></sl-sidebar-restore><ul class="astro-ojxuodky"><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/create/album/" class="astro-ojxuodky"><span class="astro-ojxuodky">사진첩</span></a></li><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/create/content-editor/" class="astro-ojxuodky"><span class="astro-ojxuodky">콘텐츠 에디터</span></a></li><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/create/idea-board/" class="astro-ojxuodky"><span class="astro-ojxuodky">아이디어 보드</span></a></li></ul></details></li><li class="astro-ojxuodky"><details open class="astro-ojxuodky"><summary class="astro-ojxuodky"><span class="group-label astro-ojxuodky"><span class="large astro-ojxuodky">동기화</span></span><svg aria-hidden="true" class="caret astro-ojxuodky astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="6"></sl-sidebar-restore><ul class="astro-ojxuodky"><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/sync/setup/" class="astro-ojxuodky"><span class="astro-ojxuodky">동기화 설정</span></a></li><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/sync/daily-use/" class="astro-ojxuodky"><span class="astro-ojxuodky">매일 동기화하기</span></a></li><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/sync/conflicts/" class="astro-ojxuodky"><span class="astro-ojxuodky">충돌 해결과 보관함</span></a></li></ul></details></li><li class="astro-ojxuodky"><details open class="astro-ojxuodky"><summary class="astro-ojxuodky"><span class="group-label astro-ojxuodky"><span class="large astro-ojxuodky">설정과 라이선스</span></span><svg aria-hidden="true" class="caret astro-ojxuodky astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="7"></sl-sidebar-restore><ul class="astro-ojxuodky"><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/settings/settings/" aria-current="page" class="astro-ojxuodky"><span class="astro-ojxuodky">설정 항목 안내</span></a></li><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/settings/security-and-updates/" class="astro-ojxuodky"><span class="astro-ojxuodky">앱 잠금과 업데이트</span></a></li><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/settings/license/" class="astro-ojxuodky"><span class="astro-ojxuodky">라이선스와 요금제</span></a></li></ul></details></li><li class="astro-ojxuodky"><details open class="astro-ojxuodky"><summary class="astro-ojxuodky"><span class="group-label astro-ojxuodky"><span class="large astro-ojxuodky">문제 해결</span></span><svg aria-hidden="true" class="caret astro-ojxuodky astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="8"></sl-sidebar-restore><ul class="astro-ojxuodky"><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/troubleshooting/capture-failed/" class="astro-ojxuodky"><span class="astro-ojxuodky">캡처와 파일 열기 문제</span></a></li><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/troubleshooting/extension-not-connected/" class="astro-ojxuodky"><span class="astro-ojxuodky">확장 연결 문제</span></a></li><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/troubleshooting/sync-errors/" class="astro-ojxuodky"><span class="astro-ojxuodky">동기화 오류 해결</span></a></li><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/troubleshooting/media-ocr-recording/" class="astro-ojxuodky"><span class="astro-ojxuodky">동영상, 글자 인식과 녹음 문제</span></a></li></ul></details></li><li class="astro-ojxuodky"><details open class="astro-ojxuodky"><summary class="astro-ojxuodky"><span class="group-label astro-ojxuodky"><span class="large astro-ojxuodky">참고</span></span><svg aria-hidden="true" class="caret astro-ojxuodky astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="9"></sl-sidebar-restore><ul class="astro-ojxuodky"><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/reference/shortcuts/" class="astro-ojxuodky"><span class="astro-ojxuodky">단축키와 메뉴 경로</span></a></li><li class="astro-ojxuodky"><a href="/aurora-scrap-docs/changelog/" class="astro-ojxuodky"><span class="astro-ojxuodky">릴리스 노트</span></a></li></ul></details></li></ul><script aria-hidden="true">
+		(() => {
+			const scroller = document.getElementById('starlight__sidebar');
+			if (!window._starlightScrollRestore || !scroller) return;
+			scroller.scrollTop = window._starlightScrollRestore;
+			delete window._starlightScrollRestore;
+		})();
+	</script></sl-sidebar-state-persist><div class="md:sl-hidden"><div class="mobile-preferences sl-flex astro-b5gddk54"><div class="social-icons astro-b5gddk54"></div><starlight-theme-select><label style="--sl-select-width: 6.25em" class="astro-r2p65idu"><span class="sr-only astro-r2p65idu">테마 선택</span><svg aria-hidden="true" class="icon label-icon astro-r2p65idu astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg><select autocomplete="off" class="astro-r2p65idu"><option value="dark" class="astro-r2p65idu">어두운 테마</option><option value="light" class="astro-r2p65idu">밝은 테마</option><option value="auto" selected class="astro-r2p65idu">자동</option></select><svg aria-hidden="true" class="icon caret astro-r2p65idu astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg></label></starlight-theme-select><script>
+	StarlightThemeProvider.updatePickers();
+</script></div></div></div></div></nav><div class="main-frame astro-gqpr5s5a"><script type="module">var e=document.getElementById(`starlight__sidebar`),t=e?.querySelector(`sl-sidebar-state-persist`),n=`sl-sidebar-state`,r=()=>{let r=[],i=t?.dataset.hash||``;try{let e=sessionStorage.getItem(n),t=JSON.parse(e||`{}`);Array.isArray(t.open)&&t.hash===i&&(r=t.open)}catch{}return{hash:i,open:r,scroll:e?.scrollTop||0}},i=e=>{try{sessionStorage.setItem(n,JSON.stringify(e))}catch{}},a=()=>i(r()),o=(e,t)=>{let n=r();n.open[t]=e,i(n)};t?.addEventListener(`click`,e=>{if(!(e.target instanceof Element))return;let t=e.target.closest(`summary`)?.closest(`details`);if(!t)return;let n=t.querySelector(`sl-sidebar-restore`),r=parseInt(n?.dataset.index||``);isNaN(r)||o(!t.open,r)}),addEventListener(`visibilitychange`,()=>{document.visibilityState===`hidden`&&a()});</script><div class="lg:sl-flex astro-abfeecmu"><aside class="right-sidebar-container print:hidden astro-abfeecmu"><div class="right-sidebar astro-abfeecmu"><div class="lg:sl-hidden astro-q5mffni3"><mobile-starlight-toc data-min-h="2" data-max-h="3" class="astro-5ulgm6bh"><nav aria-labelledby="starlight__on-this-page--mobile" class="astro-5ulgm6bh"><details id="starlight__mobile-toc" class="astro-5ulgm6bh"><summary id="starlight__on-this-page--mobile" class="sl-flex astro-5ulgm6bh"><span class="toggle sl-flex astro-5ulgm6bh">목차<svg aria-hidden="true" class="caret astro-5ulgm6bh astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></span><span class="display-current astro-5ulgm6bh"></span></summary><div class="dropdown astro-5ulgm6bh"><ul class="isMobile astro-cxyftcne" style="--depth: 0;"><li style="--depth: 0;" class="astro-cxyftcne"><a href="#_top" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">개요</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#설정-열고-확인하기" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">설정 열고 확인하기</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#일반" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">일반</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#테마" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">테마</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#워크스페이스와-목록" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">워크스페이스와 목록</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#스크랩" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">스크랩</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#계정-라이선스-앱-정보" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">계정, 라이선스, 앱 정보</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#자주-묻는-질문" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">자주 묻는 질문</span></a><ul class="isMobile astro-cxyftcne" style="--depth: 1;"><li style="--depth: 1;" class="astro-cxyftcne"><a href="#설정에서-저장-경로를-왜-수정할-수-없나요" style="--depth: 1;" class="astro-cxyftcne"><span style="--depth: 1;" class="astro-cxyftcne">설정에서 저장 경로를 왜 수정할 수 없나요?</span></a></li><li style="--depth: 1;" class="astro-cxyftcne"><a href="#자동-재생을-끄면-동영상도-저장되지-않나요" style="--depth: 1;" class="astro-cxyftcne"><span style="--depth: 1;" class="astro-cxyftcne">자동 재생을 끄면 동영상도 저장되지 않나요?</span></a></li><li style="--depth: 1;" class="astro-cxyftcne"><a href="#간편-실행을-켜면-카테고리가-필요-없나요" style="--depth: 1;" class="astro-cxyftcne"><span style="--depth: 1;" class="astro-cxyftcne">간편 실행을 켜면 카테고리가 필요 없나요?</span></a></li></ul></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#관련-문서" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">관련 문서</span></a></li></ul></div></details></nav></mobile-starlight-toc><script type="module" src="/aurora-scrap-docs/_astro/MobileTableOfContents.astro_astro_type_script_index_0_lang.BcSo_yiZ.js"></script></div><div class="right-sidebar-panel sl-hidden lg:sl-block astro-q5mffni3"><div class="sl-container astro-q5mffni3"><starlight-toc data-min-h="2" data-max-h="3"><nav aria-labelledby="starlight__on-this-page"><h2 id="starlight__on-this-page">목차</h2><ul class="astro-cxyftcne" style="--depth: 0;"><li style="--depth: 0;" class="astro-cxyftcne"><a href="#_top" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">개요</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#설정-열고-확인하기" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">설정 열고 확인하기</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#일반" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">일반</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#테마" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">테마</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#워크스페이스와-목록" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">워크스페이스와 목록</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#스크랩" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">스크랩</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#계정-라이선스-앱-정보" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">계정, 라이선스, 앱 정보</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#자주-묻는-질문" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">자주 묻는 질문</span></a><ul class="astro-cxyftcne" style="--depth: 1;"><li style="--depth: 1;" class="astro-cxyftcne"><a href="#설정에서-저장-경로를-왜-수정할-수-없나요" style="--depth: 1;" class="astro-cxyftcne"><span style="--depth: 1;" class="astro-cxyftcne">설정에서 저장 경로를 왜 수정할 수 없나요?</span></a></li><li style="--depth: 1;" class="astro-cxyftcne"><a href="#자동-재생을-끄면-동영상도-저장되지-않나요" style="--depth: 1;" class="astro-cxyftcne"><span style="--depth: 1;" class="astro-cxyftcne">자동 재생을 끄면 동영상도 저장되지 않나요?</span></a></li><li style="--depth: 1;" class="astro-cxyftcne"><a href="#간편-실행을-켜면-카테고리가-필요-없나요" style="--depth: 1;" class="astro-cxyftcne"><span style="--depth: 1;" class="astro-cxyftcne">간편 실행을 켜면 카테고리가 필요 없나요?</span></a></li></ul></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#관련-문서" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">관련 문서</span></a></li></ul></nav></starlight-toc><script type="module" src="/aurora-scrap-docs/_astro/TableOfContents.astro_astro_type_script_index_0_lang.Csloo1VZ.js"></script></div></div></div></aside><div class="main-pane astro-abfeecmu"><main data-pagefind-body class="astro-vdxcvpsm" lang="ko" dir="ltr"><div class="content-panel astro-oil7k7jf"><div class="sl-container astro-oil7k7jf"><h1 id="_top" class="astro-2sm4b3ln">설정 항목 안내</h1></div></div><div class="content-panel astro-oil7k7jf"><div class="sl-container astro-oil7k7jf"><div class="sl-markdown-content"><p>설정에서는 앱 표시 방식, 목록을 읽는 방법, 스크랩의 미디어 처리, Google 계정과 라이선스를 관리합니다. 설정 창은 <strong>일반</strong>, <strong>테마</strong>, <strong>워크스페이스</strong>, <strong>목록</strong>, <strong>스크랩</strong>, <strong>계정</strong>, <strong>라이선스</strong>의 일곱 탭으로 구성됩니다. 같은 스크랩이라도 표시 방식과 저장 옵션의 역할은 다릅니다. 화면을 바꾸려는 것인지, 앞으로 가져올 자료의 처리 방식을 바꾸려는 것인지 먼저 구분하고 해당 탭을 엽니다.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="설정-열고-확인하기">설정 열고 확인하기</h2><a class="sl-anchor-link" href="#설정-열고-확인하기"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>섹션 제목: “설정 열고 확인하기”</span></a></div>
+<ol>
+<li>상단 설정 아이콘을 누릅니다. 키보드로는 Ctrl+, (macOS는 Cmd+,)를 사용합니다. 입력 중이면 입력란 바깥을 클릭한 뒤 실행합니다.</li>
+<li>왼쪽 탭에서 바꾸려는 항목이 있는 구역을 선택합니다. macOS에서는 <strong>Aurora Scrap → 환경설정</strong> 메뉴로도 같은 창을 엽니다.</li>
+<li>현재 선택과 설명 문구를 확인한 뒤 값을 바꿉니다. 테마, 언어, 목록 관련 옵션처럼 변경 즉시 저장되는 항목이 있습니다.</li>
+<li>보안설정의 새 비밀번호는 두 입력을 일치시킨 뒤 하단 <strong>저장</strong>을 눌러 적용합니다. 비밀번호를 입력한 것만으로 잠금 설정이 완료되지는 않습니다.</li>
+<li>창을 닫고 실제 목록이나 미리보기에서 결과를 확인합니다. <strong>취소</strong>나 닫기를 누르면 이미 반영된 모든 설정이 되돌아간다고 생각하지 않습니다.</li>
+</ol>
+<p><img alt="AURORA 설정 일반 탭의 언어, 링크 열기, 간편 실행, 자동 업데이트와 보안 설정" loading="lazy" decoding="async" width="850" height="820" src="/aurora-scrap-docs/_astro/settings-general-ko.BuqkpKzM_1Kzx0h.webp" srcset=""></p>
+<p><em>개인 저장 경로를 가린 현재 한국어 설정의 일반 탭입니다.</em></p>
+<div class="sl-heading-wrapper level-h2"><h2 id="일반">일반</h2><a class="sl-anchor-link" href="#일반"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>섹션 제목: “일반”</span></a></div>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>선택 또는 동작</th>
+<th>사용 방법</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>저장 경로</td>
+<td>워크스페이스 생성에 사용하는 전체 저장 루트 표시</td>
+<td>읽기 전용입니다. 옆의 폴더 열기 버튼으로 위치를 확인합니다.</td>
+</tr>
+<tr>
+<td>언어</td>
+<td>한국어, English, 日本語, 中文</td>
+<td>선택한 언어로 앱 문구를 바꿉니다.</td>
+</tr>
+<tr>
+<td>링크 열기</td>
+<td>기본 브라우저, Aurora 브라우저</td>
+<td>원본 링크를 열 브라우저를 선택합니다.</td>
+</tr>
+<tr>
+<td>새 콘텐츠·아이디어 간편 실행</td>
+<td>켜기 또는 끄기</td>
+<td>켜면 바로 생성하고, 끄면 입력 다이얼로그를 먼저 엽니다.</td>
+</tr>
+<tr>
+<td>자동 업데이트</td>
+<td>켜기 또는 끄기</td>
+<td>끄면 새 버전을 알려 주지만 자동으로 내려받지 않습니다.</td>
+</tr>
+<tr>
+<td>보안설정</td>
+<td>비밀번호와 선택적 힌트</td>
+<td>앱 실행 시 잠금 화면을 사용합니다.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>저장 경로</strong>는 다른 폴더를 입력해 기존 자료를 옮기는 항목이 아닙니다. 처음 정한 저장 위치를 확인하는 표시입니다. 활성 워크스페이스의 실제 폴더는 <strong>워크스페이스 → 저장 폴더 열기</strong>로 확인합니다. 전체 저장 루트와 지금 선택한 워크스페이스 폴더를 혼동하지 않습니다.</p>
+<p>언어는 앱을 다시 설치하지 않고 바꿀 수 있습니다. 번역된 메뉴의 위치는 동일하므로 다른 언어를 실수로 선택했으면 설정의 첫 번째 탭으로 돌아와 언어를 다시 선택합니다. <strong>링크 열기</strong>는 웹페이지 원본을 확인할 때의 선택입니다. 이미 저장한 스크린샷 파일의 형식이나 목록의 분류를 바꾸지는 않습니다.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="테마">테마</h2><a class="sl-anchor-link" href="#테마"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>섹션 제목: “테마”</span></a></div>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>선택값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>테마</td>
+<td>라이트, 다크, 시스템</td>
+<td>밝은 화면, 어두운 화면 또는 OS 설정을 사용합니다.</td>
+</tr>
+<tr>
+<td>다크 색상 계열</td>
+<td>다크 블루, 그레이 다크</td>
+<td>다크를 선택했을 때 색상 계열을 고릅니다.</td>
+</tr>
+<tr>
+<td>카테고리 트리 스타일</td>
+<td>모던, 클래식, 라인</td>
+<td>카테고리 목록의 강조와 연결선 표시를 바꿉니다.</td>
+</tr>
+</tbody>
+</table>
+<p>테마를 바꿔도 카테고리 구조와 자료는 그대로 있습니다. 트리 스타일은 표시 방식이며 카테고리를 새로 만드는 작업이 아닙니다. 시스템 테마를 사용하면 OS의 밝고 어두운 모드를 따릅니다. 특정 다크 색상을 직접 비교하려면 먼저 <strong>다크</strong>를 선택해 색상 계열 항목을 확인합니다.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="워크스페이스와-목록">워크스페이스와 목록</h2><a class="sl-anchor-link" href="#워크스페이스와-목록"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>섹션 제목: “워크스페이스와 목록”</span></a></div>
+<table>
+<thead>
+<tr>
+<th>탭</th>
+<th>항목</th>
+<th>역할</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>워크스페이스</td>
+<td>탭 위치</td>
+<td>워크스페이스 탭을 상단 또는 하단에 놓습니다.</td>
+</tr>
+<tr>
+<td>워크스페이스</td>
+<td>탭에 스크랩 개수 표시</td>
+<td>탭에서 항목 수를 함께 봅니다.</td>
+</tr>
+<tr>
+<td>목록</td>
+<td>목록 표시 방식</td>
+<td>무한 스크롤 또는 페이지네이션을 선택합니다.</td>
+</tr>
+<tr>
+<td>목록</td>
+<td>페이지당 목록 수</td>
+<td>한 번에 표시할 목록 수를 조절합니다.</td>
+</tr>
+<tr>
+<td>목록</td>
+<td>사진첩 목록 갯수</td>
+<td>사진첩에서 한 번에 불러올 이미지 수를 정합니다.</td>
+</tr>
+<tr>
+<td>목록</td>
+<td>제목 풍선도움말</td>
+<td>잘린 제목 위에 마우스를 올렸을 때 전체 제목을 봅니다.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>무한 스크롤</strong>은 아래로 이동하면서 다음 항목을 이어 불러옵니다. <strong>페이지네이션</strong>은 페이지 번호로 이동합니다. 사진첩 목록 수보다 많은 이미지도 삭제되거나 숨겨진 채 끝나는 것은 아닙니다. 사진첩에서 계속 스크롤하면 나머지를 불러옵니다. 카드와 리스트의 모양 전환은 목록 툴바나 보기 메뉴에서 따로 진행합니다.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="스크랩">스크랩</h2><a class="sl-anchor-link" href="#스크랩"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>섹션 제목: “스크랩”</span></a></div>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>선택 또는 동작</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>동영상 자동 재생</td>
+<td>켜기 또는 끄기</td>
+<td>목록에서 영상을 선택했을 때 바로 재생할지 정합니다.</td>
+</tr>
+<tr>
+<td>페이지 내 동영상/오디오 다운로드</td>
+<td>켜기 또는 끄기</td>
+<td>페이지에 포함된 미디어를 로컬 저장 대상으로 삼습니다.</td>
+</tr>
+<tr>
+<td>최대 용량</td>
+<td>100 MB, 500 MB, 1 GB, 2 GB, 무제한</td>
+<td>페이지 내 미디어 다운로드의 최대 용량을 정합니다.</td>
+</tr>
+<tr>
+<td>동영상 사이트</td>
+<td>사이트 추가, 삭제</td>
+<td>해당 주소를 영상 다운로드 방식으로 처리할지 정합니다.</td>
+</tr>
+<tr>
+<td>기본 목록 복원</td>
+<td>사이트 목록 초기화</td>
+<td>동영상 사이트 목록을 기본 구성으로 되돌립니다.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>동영상 사이트</strong>에 사이트 주소를 추가하면 해당 주소의 스크랩 처리 방식이 달라집니다. 추가한 사이트의 모든 영상이 내려받아지는 것을 보장하지는 않습니다. 로그인이 필요하거나 저장을 허용하지 않는 영상은 실패할 수 있습니다. <strong>무제한</strong>은 이 미디어 옵션의 상한을 없애는 선택이며 요금제의 워크스페이스 용량 제한을 해제하지 않습니다.</p>
+<p>현재 설정 창에는 기본 저장 포맷과 동시 스크랩 수를 바꾸는 별도 조작 항목이 없습니다. 새 웹스크랩의 PNG, JPG, PDF 선택은 스크랩 다이얼로그에서 확인합니다. 없는 설정을 찾기 위해 다른 탭을 반복해서 살펴볼 필요는 없습니다.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="계정-라이선스-앱-정보">계정, 라이선스, 앱 정보</h2><a class="sl-anchor-link" href="#계정-라이선스-앱-정보"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>섹션 제목: “계정, 라이선스, 앱 정보”</span></a></div>
+<p><strong>계정</strong>에서는 Google 계정을 연결하거나 연결을 해제합니다. 연결된 이메일과 재인증 안내를 확인합니다. 동기화 적용 전에 남긴 로컬 자료는 같은 탭의 <strong>보관함</strong>에서 확인하고 내보낼 수 있습니다. 개발 설정이 없는 환경에서 표시되는 <strong>OAuth 클라이언트 ID</strong>는 개발자 구성을 위한 항목입니다. 일반 사용자가 Google 계정 비밀번호를 넣는 곳이 아닙니다.</p>
+<p><strong>라이선스</strong>에서는 현재 상태, 요금제별 한도, 등록된 키의 적용 버전과 발급 정보를 확인합니다. <strong>라이선스 키 등록</strong>에 전체 키를 붙여 넣고 <strong>등록</strong>을 누릅니다. 앱 버전과 제품 정보는 <strong>도움말 → Aurora Scrap 정보</strong>에서 확인합니다. macOS에서는 앱 이름 메뉴에서도 정보 창을 열 수 있습니다.</p>
+<aside aria-label="표시 변경과 자료 변경" class="starlight-aside starlight-aside--note"><p class="starlight-aside__title" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" class="starlight-aside__icon"><path d="M12 11a1 1 0 0 0-1 1v4a1 1 0 0 0 2 0v-4a1 1 0 0 0-1-1Zm.38-3.92a1 1 0 0 0-.76 0 1 1 0 0 0-.33.21 1.15 1.15 0 0 0-.21.33 1 1 0 0 0 .21 1.09c.097.088.209.16.33.21A1 1 0 0 0 13 8a1.05 1.05 0 0 0-.29-.71 1 1 0 0 0-.33-.21ZM12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16.001A8 8 0 0 1 12 20Z"/></svg>표시 변경과 자료 변경</p><div class="starlight-aside__content"><p>테마, 목록 표시 방식, 탭 위치는 자료의 저장 형식을 바꾸지 않습니다. 저장 위치를 확인하거나 파일 형식을 선택하는 작업은 해당 화면에서 별도로 진행합니다.</p></div></aside>
+<div class="sl-heading-wrapper level-h2"><h2 id="자주-묻는-질문">자주 묻는 질문</h2><a class="sl-anchor-link" href="#자주-묻는-질문"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>섹션 제목: “자주 묻는 질문”</span></a></div>
+<div class="sl-heading-wrapper level-h3"><h3 id="설정에서-저장-경로를-왜-수정할-수-없나요">설정에서 저장 경로를 왜 수정할 수 없나요?</h3><a class="sl-anchor-link" href="#설정에서-저장-경로를-왜-수정할-수-없나요"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>섹션 제목: “설정에서 저장 경로를 왜 수정할 수 없나요?”</span></a></div>
+<p>현재 화면은 실제 저장 루트를 읽기 전용으로 표시합니다. 폴더를 열어 위치를 확인하는 용도입니다. 표시된 글자를 고쳐 모든 워크스페이스를 이동하는 기능은 제공하지 않습니다.</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="자동-재생을-끄면-동영상도-저장되지-않나요">자동 재생을 끄면 동영상도 저장되지 않나요?</h3><a class="sl-anchor-link" href="#자동-재생을-끄면-동영상도-저장되지-않나요"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>섹션 제목: “자동 재생을 끄면 동영상도 저장되지 않나요?”</span></a></div>
+<p>자동 재생과 다운로드는 별도 옵션입니다. 선택 즉시 소리가 나지 않게 하려면 <strong>동영상 자동 재생</strong>을 끕니다. 페이지 내 영상 저장 여부는 <strong>페이지 내 동영상/오디오 다운로드</strong>에서 조절합니다.</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="간편-실행을-켜면-카테고리가-필요-없나요">간편 실행을 켜면 카테고리가 필요 없나요?</h3><a class="sl-anchor-link" href="#간편-실행을-켜면-카테고리가-필요-없나요"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>섹션 제목: “간편 실행을 켜면 카테고리가 필요 없나요?”</span></a></div>
+<p>간편 실행은 생성 전에 입력 창을 거칠지 정합니다. 자료를 정리할 카테고리 조건을 없애는 설정은 아닙니다. 생성 대상 카테고리를 먼저 선택하고 새 콘텐츠나 아이디어를 만듭니다.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="관련-문서">관련 문서</h2><a class="sl-anchor-link" href="#관련-문서"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>섹션 제목: “관련 문서”</span></a></div>
+<ul>
+<li><a href="../security-and-updates/">앱 잠금과 업데이트</a></li>
+<li><a href="../license/">라이선스 안내</a></li>
+<li><a href="../../sync/setup/">동기화 설정</a></li>
+<li><a href="../../formats/overview/">저장 형식 비교</a></li>
+</ul>
+</div><footer class="sl-flex astro-xhxjzfa7"><div class="meta sl-flex astro-xhxjzfa7"></div><div class="pagination-links print:hidden astro-jgq3vlii" dir="ltr"><a href="/aurora-scrap-docs/sync/conflicts/" rel="prev" class="astro-jgq3vlii"><svg aria-hidden="true" class="astro-jgq3vlii astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17 11H9.41l3.3-3.29a1.004 1.004 0 1 0-1.42-1.42l-5 5a1 1 0 0 0-.21.33 1 1 0 0 0 0 .76 1 1 0 0 0 .21.33l5 5a1.002 1.002 0 0 0 1.639-.325 1 1 0 0 0-.219-1.095L9.41 13H17a1 1 0 0 0 0-2Z"/></svg><span class="astro-jgq3vlii">이전 페이지<br class="astro-jgq3vlii"><span class="link-title astro-jgq3vlii">충돌 해결과 보관함</span></span></a><a href="/aurora-scrap-docs/settings/security-and-updates/" rel="next" class="astro-jgq3vlii"><svg aria-hidden="true" class="astro-jgq3vlii astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z"/></svg><span class="astro-jgq3vlii">다음 페이지<br class="astro-jgq3vlii"><span class="link-title astro-jgq3vlii">앱 잠금과 업데이트</span></span></a></div></footer></div></div></main></div></div></div></div></body></html>
